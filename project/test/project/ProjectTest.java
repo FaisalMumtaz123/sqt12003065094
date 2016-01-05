@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package project;
-
+import java.util.Arrays;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -103,7 +103,7 @@ public class ProjectTest {
         int[] arr = {};
 		prj.sort(arr);
 		assertEquals(0, arr.length);
- fail("The test case is a prototype.");	
+ fail("The test case to check empty array is fail.");	
     }
     @Test
     public void testsingleelement() {
@@ -112,7 +112,7 @@ public class ProjectTest {
                 prj1.sort(arr);
 		assertEquals(1, arr.length);
 		
-     fail("The test case is a prototype.");
+     fail("The test case to test single value array is fail.");
     }
 @Test
 public void testsort() {
@@ -120,7 +120,8 @@ public void testsort() {
 		heap prj5=new heap();
                 prj5.sort(arr);
 		assertEquals(3, arr.length);
-		fail("the test case is prototype");
+                	assertTrue(Arrays.equals(arr, new int[]{5, 7, 8}));
+		fail("the test case to check sort is coorect or not is fail");
 	}
 
 
