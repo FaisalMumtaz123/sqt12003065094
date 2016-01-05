@@ -44,7 +44,8 @@ public class ProjectTest {
     public void testSort() {
         System.out.println("sort");
         int[] arr = null;
-        Project.sort(arr);
+        heap prj4=new heap();
+        prj4.sort(arr);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -56,7 +57,8 @@ public class ProjectTest {
     public void testHeapify() {
         System.out.println("heapify");
         int[] arr = null;
-        Project.heapify(arr);
+        heap prj3=new heap();
+        prj3.heapify(arr);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -69,7 +71,9 @@ public class ProjectTest {
         System.out.println("maxheap");
         int[] arr = null;
         int i = 0;
-        Project.maxheap(arr, i);
+        heap prj2=new heap();
+        
+        prj2.maxheap(arr, i);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -79,11 +83,12 @@ public class ProjectTest {
      */
     @Test
     public void testSwap() {
+        heap prj0=new heap();
         System.out.println("swap");
         int[] arr = null;
         int i = 0;
         int j = 0;
-        Project.swap(arr, i, j);
+        prj0.swap(arr, i, j);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -91,13 +96,32 @@ public class ProjectTest {
     /**
      * Test of main method, of class Project.
      */
-    @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        Project.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
     
+    @Test
+    public void testcheckempty() {
+	heap prj=new heap();	
+        int[] arr = {};
+		prj.sort(arr);
+		assertEquals(0, arr.length);
+ fail("The test case is a prototype.");	
+    }
+    @Test
+    public void testsingleelement() {
+		int[] arr = {1};
+		heap prj1=new heap();
+                prj1.sort(arr);
+		assertEquals(1, arr.length);
+		
+     fail("The test case is a prototype.");
+    }
+@Test
+public void testsort() {
+		int[] arr = {7, 8, 5};
+		heap prj5=new heap();
+                prj5.sort(arr);
+		assertEquals(3, arr.length);
+		fail("the test case is prototype");
+	}
+
+
 }
